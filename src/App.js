@@ -21,9 +21,9 @@ function App() {
        <Route  exact path="/" component={ProductList}/>
         <Route path="/details"  component={ Details}/>
         <Route path="/SlideHeading"  component={ SlideHeading}/>
-        {/* <Route path="/cart" component={Cart}/>
+        <Route path="/cart" component={Cart}/>
         <Route path="/shipDetails" component={ShipDetail}/>
-        <Route path="/CartPayment" component={CartPayment}/> */}
+        // <Route path="/CartPayment" component={CartPayment}/>
         <Route path="/OrderPlaced" component={OrderPlaced}/>
       </Switch>
       <Footer/>  
