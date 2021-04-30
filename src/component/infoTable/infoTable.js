@@ -32,7 +32,7 @@ function InfoTable(){
                                     <tr>
                                     <td className={classes.image}><img src={item.img}  alt="logo"/></td>
                                     <td>{item.title}</td>
-                                    <td>{item.price}</td>
+                                    <td>{item.total}</td>
                                     <td>Credit Card</td>
                                     <td>Confirmed <CheckCircleOutlineRoundedIcon className={classes.myIcon}/></td>
                                     </tr>
