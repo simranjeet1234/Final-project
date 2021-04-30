@@ -16,7 +16,7 @@ function MyNavbar() {
                         <Nav.Link className={classes.links} href="#about">About</Nav.Link>
                         <Nav.Link className={classes.links} href="#shop">Shop</Nav.Link>
                         <Nav.Link className=" mr-5" href="#help">Help</Nav.Link>
-                         <Link to="/slideHeading">
+                         <Link to="/cart">
                             <Button variant="warning"> 
                                 <ShoppingCartSharpIcon/> Your Cart   
                                 <ProductConsumer>
