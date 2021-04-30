@@ -4,7 +4,7 @@ import classes from './shipDetails.module.css';
 import ShipDetailsSummary from './shipDetailsSummary/shipDetailsSummary';
 import {Link} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-// import SlideHeading from '../../slideHeading/slideHeading';
+import SlideHeading from '../../slideHeading/slideHeading';
 import { ProductConsumer } from '../../../context/context';
 
 
@@ -23,7 +23,7 @@ function ShipDetail() {
       
     return(
         <React.Fragment>
-            {/* <SlideHeading/> */}
+            <SlideHeading/>
             <div className={classes.detailBody}>
                <Row>
                    <Col className="col-lg-8 col-md-8  col-12 ">

@@ -6,7 +6,7 @@ import ShipDetailsSummary from '../shipDetails/shipDetailsSummary/shipDetailsSum
 import {Link} from 'react-router-dom';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
-// import SlideHeading from '../../slideHeading/slideHeading';
+import SlideHeading from '../../slideHeading/slideHeading';
 
 
 
@@ -43,7 +43,7 @@ function CartPayment(){
 
     return(
         <React.Fragment>
-            {/* <SlideHeading/> */}
+            <SlideHeading/>
         <div className={classes.PaymentBody}>
            <Row>
           

@@ -46,7 +46,7 @@ class Details extends Component{
                                                 {info}
                                             </p>
                                         </div>
-                                        <Link to="/slideHeading">
+                                        <Link to="/cart">
                                         <button disabled={addToCart ? true : false}
                                                 onClick={() => {
                                             value.addToCartHandler(id );

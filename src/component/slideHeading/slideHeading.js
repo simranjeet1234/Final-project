@@ -1,41 +1,27 @@
 import React from 'react';
 import classes from './slideHeading.module.css';
-import {useState} from 'react';
-import {Tabs, Tab} from 'react-bootstrap';
-import Cart from '../cart/cart';
-import ShipDetail from '../cart/shipDetails/shipDetails';
-import CartPayment from '../cart/cartPayment/cartPayment';
+
+
 
 
 function SlideHeading(){
-    const [key, setKey] = useState('home');
-
+    
 
     return(
         <React.Fragment>
-             <Tabs
-                fill justify 
-                className={classes.head}
-                id="controlled-tab-example"
-                activeKey={key}
-                onSelect={(k) => setKey(k)}
-                >
-                <Tab
-                className={classes.tab}
-                 eventKey="home" title="Shopping Cart">
-                    <Cart/>
-                </Tab>
-                <Tab
-                 className={classes.tab}
-                 eventKey="profile" title="Shipping Details">
-                    < ShipDetail/>
-                </Tab>
-                <Tab 
-                 className={classes.tab}
-                eventKey="contact" title="Payment Method" >
-                    <CartPayment/>
-                </Tab>
-             </Tabs>
+             <div className={classes.head}>
+                <ul class="nav nav-tabs nav-justified" >
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Shopping Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shipping Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Payment Method</a>
+                        </li>
+                </ul>
+             </div>
 
             
         </React.Fragment>

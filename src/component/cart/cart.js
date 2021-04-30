@@ -7,6 +7,7 @@ import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import CartSummary from './cartSummary/cartSummary';
 import {Link} from 'react-router-dom';
+import SlideHeading from '../slideHeading/slideHeading';
 
 
 
@@ -18,7 +19,7 @@ function Cart(){
                 if(myCart.length > 0){
                     return(
                         <React.Fragment>
-                           
+                           <SlideHeading/>
                <div className={classes.cartBody}>
                
                 <Row>
@@ -63,7 +64,7 @@ function Cart(){
                                 <Link to="/">
                                 <button>Cancel</button>
                                 </Link>
-                                <Link to="shipDetails">
+                                <Link to="/shipDetails">
                                 <button>Next</button>
                                 </Link>
                             </div>
