@@ -14,6 +14,12 @@ const productContext = React.createContext();
          cartTax:0,
          coupon:0,
          delivery:0,
+         fName:'',
+         lName:'',
+         address1:'',
+         address2:'',
+         city:'',
+         phone:'',
       
          
      };
@@ -165,6 +171,50 @@ const productContext = React.createContext();
              })
          }
 
+
+         fNameHandler = (e) => {
+            this.setState(() => {
+                return{
+                    fName: e
+                }
+            })
+         }
+         lNameHandler = (e) =>{
+            this.setState(() => {
+                return{
+                    lName: e
+                }
+            })
+         }
+         address1Handler = (e) =>{
+            this.setState(() => {
+                return{
+                    address1: e
+                }
+            })
+         }
+         address2Handler = (e) =>{
+            this.setState(() => {
+                return{
+                    address2: e
+                }
+            })
+         }
+        
+         cityHandler = (e) =>{
+            this.setState(() => {
+                return{
+                    city: e
+                }
+            })
+         }
+         phoneNumberHandler = (e) =>{
+            this.setState(() => {
+                return{
+                    phone: e
+                }
+            })
+         }
          
 
     render(){
@@ -179,6 +229,12 @@ const productContext = React.createContext();
             changeCouponHandler:this.changeCouponHandler,
             extraAmountHandler:this.extraAmountHandler,
             freeShipHandler:this.freeShipHandler,
+            fNameHandler:this.fNameHandler,
+            lNameHandler:this.lNameHandler,
+            address1Handler:this.address1Handler,
+            address2Handler:this.address2Handler,
+            cityHandler:this.cityHandler,
+            phoneNumberHandler:this.phoneNumberHandler,
            }}>
                {this.props.children}
            </productContext.Provider>

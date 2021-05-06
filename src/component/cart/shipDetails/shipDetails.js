@@ -31,28 +31,49 @@ function ShipDetail() {
                         <h2>Shopping Details</h2>
                     </div>    
                     <div className={classes.myForm}>
+                    <ProductConsumer>
+                    {value => {
+                                       return(
                     <Form onSubmit={clickHandler}>
                         <Form.Row className="mb-3">
                             <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Control type="text" placeholder="First Name" id="first" required />
+                            <Form.Control 
+                            type="text"  
+                            onChange={(e) => value.fNameHandler(e.target.value)} 
+                            placeholder="First Name" 
+                            id="first" 
+                            required />
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridPassword">
-                            <Form.Control type="text" placeholder="Last Name"  id="last" required />
+                            <Form.Control 
+                            type="text" 
+                            onChange={(e) => value.lNameHandler(e.target.value)}
+                            placeholder="Last Name"  
+                            id="last" 
+                            required />
                             </Form.Group>
                         </Form.Row>
 
                         <Form.Group className="mb-4" controlId="formGridAddress1">
-                            <Form.Control placeholder="Address" id="address" required/>
+                            <Form.Control 
+                            onChange={(e) => value.address1Handler(e.target.value)}
+                            placeholder="Address" 
+                            id="address" 
+                            required/>
                         </Form.Group>
 
                         <Form.Group className="mb-4" controlId="formGridAddress2">
-                            <Form.Control placeholder="Address 2"  id="address" required />
+                            <Form.Control 
+                            onChange={(e) => value.address2Handler(e.target.value)}
+                            placeholder="Address 2"  
+                            id="address" 
+                            required />
                         </Form.Group>
 
                         <Form.Row className="mb-3">
                             <Form.Group as={Col} controlId="formGridState">
-                            <Form.Control as="select" defaultValue="Country" required>
+                            <Form.Control  as="select" defaultValue="Country" required>
                                 <option>India</option>
                                 <option>Canada</option>
                                 <option>USA</option>
@@ -61,7 +82,12 @@ function ShipDetail() {
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridCity">
-                            <Form.Control type="text" placeholder="City " id="city" required />
+                            <Form.Control 
+                            onChange={(e) => value.cityHandler(e.target.value)}
+                            type="text" 
+                            placeholder="City " 
+                            id="city"
+                             required />
                             </Form.Group>
                         </Form.Row>
 
@@ -71,13 +97,18 @@ function ShipDetail() {
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridPassword">
-                            <Form.Control className={classes.input}  type="number" placeholder="Phone Number"  id="num" pattern="[0-9]{5}-[0-9]{5}" required />
+                            <Form.Control  
+                            onChange={(e) => value.phoneNumberHandler(e.target.value)} 
+                            className={classes.input}  
+                            type="number" 
+                            placeholder="Phone Number"  
+                            id="num" 
+                            pattern="[0-9]{5}-[0-9]{5}" 
+                            required />
                             </Form.Group>
                         </Form.Row>
-                        <ProductConsumer>
-                                   {value => {
-                                       const {} = value;
-                                       return(
+                       
+                                  
 
                                         <Form.Row className={classes.myRadio}>
                                             <Form.Group as={Col} controlId="formGridEmail">
@@ -112,10 +143,7 @@ function ShipDetail() {
                                                 </div>
                                             </Form.Group>
                                             </Form.Row>
-                                       )
-                                   }}
-                            
-                            </ProductConsumer> 
+                                     
                        
                         <div className={classes.tempButton}>
                                 <Link to="cart">
@@ -126,6 +154,10 @@ function ShipDetail() {
                                 
                             </div>
                         </Form>
+                        )
+                    }}
+             
+             </ProductConsumer> 
                     </div>
 
                    

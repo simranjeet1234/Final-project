@@ -12,13 +12,13 @@ function SlideHeading(){
              <div className={classes.head}>
                 <ul class="nav nav-tabs nav-justified" >
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Shopping Cart</a>
+                            <a class="nav-link " href="#Shopping Cart">Shopping Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shipping Details</a>
+                            <a class="nav-link" href="#shipdetails">Shipping Details</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Payment Method</a>
+                            <a class="nav-link" href="#Payment Method">Payment Method</a>
                         </li>
                 </ul>
              </div>

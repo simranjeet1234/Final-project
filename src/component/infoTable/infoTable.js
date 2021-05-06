@@ -8,7 +8,7 @@ function InfoTable(){
     return(
         <ProductConsumer>
             {value => {
-                const {myCart,  cartTotal, coupon, delivery} = value;
+                const {myCart,  cartTotal, coupon, delivery, fName, lName, address1, address2, city,  phone} = value;
                 return(
                     <React.Fragment>
                         <div className={classes.body}>
@@ -22,7 +22,9 @@ function InfoTable(){
                                     <th scope="col">Product</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
                                     <th scope="col">Mode of Payment</th>
+                                    <th scope="col">Shipping Address</th>
                                     <th scope="col">Status</th>
                                     </tr>
                                 </thead>
@@ -33,7 +35,9 @@ function InfoTable(){
                                     <td className={classes.image}><img src={item.img}  alt="logo"/></td>
                                     <td>{item.title}</td>
                                     <td>{item.total}</td>
+                                    <td>{item.count}</td>
                                     <td>Credit Card</td>
+                                    <td>{fName} {lName}, {address1}, {address2}, {city},  {phone} </td>
                                     <td>Confirmed <CheckCircleOutlineRoundedIcon className={classes.myIcon}/></td>
                                     </tr>
                                          </tbody>
