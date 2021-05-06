@@ -15,7 +15,7 @@ function Cart(){
     return(
         <ProductConsumer>
             {value => {
-                const {myCart, cartSubTotal, cartTotal, cartTax, coupon, delivery} = value;
+                const {myCart, cartSubTotal, cartTotal, cartTax, coupon, delivery, modal} = value;
                 if(myCart.length > 0){
                     return(
                         <React.Fragment>
@@ -35,7 +35,7 @@ function Cart(){
                                         </div>
                                         <div className={classes.cartLeft}>
                                             <h5>{item.title}</h5>
-                                            Variant
+                                            <h6>{modal}</h6>
                                             <h6>Lorem ipsum dolor amet offal butcher quinoa sustainable</h6>
                                             <p><span>$</span>{item.price}</p>
                                         </div>
@@ -62,7 +62,9 @@ function Cart(){
                             </div>
                             <div className={classes.tempButton}>
                                 <Link to="/">
-                                <button>Cancel</button>
+                                <button
+                                onClick={() => {value.clearCartHandler()}} 
+                                >Cancel</button>
                                 </Link>
                                 <Link to="/shipDetails">
                                 <button>Next</button>

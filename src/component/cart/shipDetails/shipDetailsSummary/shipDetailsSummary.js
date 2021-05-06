@@ -7,7 +7,7 @@ import {ProductConsumer} from '../../../../context/context';
     return(
         <ProductConsumer>
           {value => {
-                const {myCart, cartSubTotal, cartTotal, coupon, delivery} = value;
+                const {myCart, cartSubTotal, cartTotal, coupon, delivery, modal} = value;
                 return(
                     <React.Fragment>
                         <div className={classes.cartSummary}>
@@ -21,8 +21,9 @@ import {ProductConsumer} from '../../../../context/context';
                                         </div>
                                         <div className={classes.summaryLeft}>
                                             <h5>{item.title}</h5>
+                                            <h6>{modal}</h6>
                                             <h6>Lorem ipsum dolor amet offal butcher quinoa sustainable</h6>
-                                            <p><span>$</span>{item.price}</p>
+                                            {/* <p><span>$</span>{item.price}</p> */}
                                         </div>
                                 </div>
                                 

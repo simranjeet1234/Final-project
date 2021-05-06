@@ -12,11 +12,26 @@
 .detailImage{
     display: flex;
     justify-content: center;
-    /* height: 47vh; */
+    /* border: 1px solid #111; */
 }
 
 .detailImage img{
     height: 50vh;
+}
+
+.detailImage div ol li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailImage div ol li:nth-child(2){
+    padding: 0px 120px;
+}
+.detailImage div ol li img{
+    height: 120px;
+    width: 120px  ;
+    border: 1px solid #111;
 }
 
 .detailInfo{
@@ -63,6 +78,7 @@
     font-weight: 500;
     width: 200px;
     border: none;
+    outline: none;
 }
 
 
@@ -84,11 +100,32 @@
     
 }
 
+@media screen and (max-width:800px){
+    
+    .detailImage div ol li:nth-child(2){
+        padding: 0px 80px;
+    }
+    .detailImage div ol li img{
+        height: 80px;
+        width: 80px  ;
+        border: 1px solid #111;
+    }
+    
+}
+@media screen and (max-width:500px){
+    .detailImage{
+        margin-bottom: 30px;
+    }
+   
+}
 @media screen and (max-width:320px){
     .detailsHeading div span{
         margin-right: 5px;
         font-size: 6px;
         color: #E0A800;
+    }
+    .detailImage div ol li:nth-child(2){
+        padding: 0px 60px;
     }
     
 }

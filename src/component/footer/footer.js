@@ -1,6 +1,7 @@
 import React from 'react';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 import classes from './footer.module.css';
+// import {Link} from 'react-router-dom';
 
 function Footer() {
     return(

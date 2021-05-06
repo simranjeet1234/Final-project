@@ -78,7 +78,7 @@ function CartPayment(){
                                     </InputGroup>
                                 </Col>
                                 <Col className="col-md-3 col-6">
-                                    <FormControl  className={classes.monthInput} type="number" placeholder="MM/YY" required/>
+                                    <FormControl  className={classes.monthInput} type="text" placeholder="MM/YY"  maxLength="5" required/>
                                 </Col>
                                 <Col className="col-md-3 col-6">
                                     <InputGroup className="mb-3">

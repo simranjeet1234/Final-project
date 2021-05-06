@@ -20,8 +20,7 @@ const productContext = React.createContext();
          address2:'',
          city:'',
          phone:'',
-      
-         
+         modal:'',
      };
      
      componentDidMount(){
@@ -90,7 +89,7 @@ const productContext = React.createContext();
         const myProduct = tempCart.find(item => item.id === id)
         const index = tempCart.indexOf(myProduct);
         const product = tempCart[index];
-        if(product.count > 0){
+        if(product.count > 1){
             product.count = product.count - 1;
         }
         product.total = product.count * product.price;
@@ -98,14 +97,16 @@ const productContext = React.createContext();
             myCart:[...tempCart ]
         }},
         () => {this.addTotalHandler()})
-       
-       
-        
      }
 
-     removeItemHandler = (id) => {
-        console.log('item removed');
+     variantHandler = (e) => {
+         this.setState(() => {
+             return{
+                 modal:e
+             }
+         })
      }
+
 
      addTotalHandler = () => {
          let subTotal = 0;
@@ -120,6 +121,27 @@ const productContext = React.createContext();
                 cartTotal:total
                 
              }
+         })
+     }
+
+
+     clearCartHandler = () => {
+         this.setState(() => {
+             return{
+                myCart:[],
+                coupon:0,
+                delivery:0,
+                fName:'',
+                lName:'',
+                address1:'',
+                address2:'',
+                city:'',
+                phone:'',
+                modal:'',
+             };
+         },() => {
+             this.productHandler();
+             this.addTotalHandler();
          })
      }
 
@@ -225,7 +247,7 @@ const productContext = React.createContext();
             addToCartHandler:this.addToCartHandler,
             incrementHandler:this.incrementHandler,
             decrementHandler:this.decrementHandler,
-            removeItemHandler:this.removeItemHandler,
+            clearCartHandler:this.clearCartHandler,
             changeCouponHandler:this.changeCouponHandler,
             extraAmountHandler:this.extraAmountHandler,
             freeShipHandler:this.freeShipHandler,
@@ -235,6 +257,7 @@ const productContext = React.createContext();
             address2Handler:this.address2Handler,
             cityHandler:this.cityHandler,
             phoneNumberHandler:this.phoneNumberHandler,
+            variantHandler:this.variantHandler,
            }}>
                {this.props.children}
            </productContext.Provider>

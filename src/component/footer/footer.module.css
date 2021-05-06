@@ -21,6 +21,7 @@
    
 }
 
+
 .footerlinks a:after{
     content: '|';
     margin-left: 30px;
